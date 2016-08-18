@@ -2,7 +2,6 @@
 {% load i18n cms_tags %}
 
 {% block content_carousel %}
-<div class="slideshow">
     {% for plugin in instance.child_plugin_instances %}
         {% render_plugin plugin %}
     {% endfor %}
@@ -34,6 +33,5 @@
 
     </li>
 <!-- slide 2 end -->
-</div>
 
 {% endblock content_carousel %}
