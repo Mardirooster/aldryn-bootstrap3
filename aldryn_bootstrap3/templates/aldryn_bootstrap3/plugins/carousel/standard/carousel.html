@@ -2,6 +2,65 @@
 {% load i18n cms_tags %}
 
 {% block content_carousel %}
+<ul class="slides">
+        {% for plugin in instance.child_plugin_instances %}
+        {% render_plugin plugin %}
+    {% endfor %}
+
+    
+    <!-- slide 1 start -->
+    <!-- ================ -->
+    <li data-transition="fade" data-slotamount="4" data-masterspeed="500" data-saveperformance="on" data-title="Next Generation Template">
+
+        <!-- main image -->
+        <img src="images/education-slider-slide-1.jpg" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+
+        <!-- LAYER NR. 1 -->
+        <div class="tp-caption fade fadeout dark-translucent-bg caption-box text-left"
+        style="background-color: rgba(0, 0, 0, 0.45);"
+        data-x="right"
+        data-y="bottom" 
+        data-speed="500"
+        data-start="1300"
+        data-easing="easeOutQuad"
+        data-endspeed="600">
+        <h2 class="title"><a href="#" class="link-light">Learn from the best</a></h2>
+        <div class="separator-2 light clearfix hidden-xs"></div>
+        <p class="hidden-xs">Voluptatem ad provident non repudiandae beatae cupiditate amet reiciendis lorem ipsum dolor sit amet, consectetur.</p>
+        <div class="text-right hidden-xs"><a class="btn btn-small btn-default margin-clear" href="page-services.html">Read More</a></div>
+    </div>
+
+    </li>
+    <!-- slide 1 end -->
+
+    <!-- slide 2 start -->
+    <!-- ================ -->
+    <li data-transition="fade" data-slotamount="4" data-masterspeed="500" data-saveperformance="on" data-title="Premium Bootstrap Template">
+
+        <!-- main image -->
+        <img src="images/education-slider-slide-2.jpg" alt="slidebg2" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+
+        <!-- LAYER NR. 1 -->
+        <div class="tp-caption fade fadeout dark-translucent-bg caption-box text-left"
+        style="background-color: rgba(0, 0, 0, 0.45);"
+        data-x="right"
+        data-y="bottom" 
+        data-speed="500"
+        data-start="1300"
+        data-easing="easeOutQuad"
+        data-endspeed="600">
+        <h2 class="title"><a href="#" class="link-light">Study to the College</a></h2>
+        <div class="separator-2 light clearfix hidden-xs"></div>
+        <p class="hidden-xs">Voluptatem ad provident non repudiandae beatae cupiditate amet reiciendis lorem ipsum dolor sit amet, consectetur.</p>
+        <div class="text-right hidden-xs"><a class="btn btn-small btn-default margin-clear" href="page-services.html">Read More</a></div>
+        </div>
+
+    </li>
+<!-- slide 2 end -->
+</ul>
+
+
+
 {% with carousel=instance %}
 {# INFO: indicators #}
 <ol class="carousel-indicators">
